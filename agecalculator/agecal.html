@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="agecal.css" />
     <title>Age Calculator</title>
+    <link rel="stylesheet" href="agecal.css">
 </head>
-
 <body>
-
-    <div class="container">
-        <h1 class="animated-text">AGE CALCULATOR</h1>
-        <label for="birthdate">Enter your birthdate:</label><br>
-        <input type="date" id="birthdate"><br><br>
-        <button onclick="calculateAge()">Calculate</button>
-        <p id="result" class="animated-text"></p>
+    <div id="calculator">
+        <h2>Age Calculator</h2>
+        <label for="birthdate">Enter your birthdate:</label>
+        <input type="date" id="birthdate">
+        <br>
+        <button onclick="calculateAge()">Calculate Age</button>
+        <div id="result"></div>
     </div>
-    <script src="/agecal.js"></script>
-    
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="agecal.js"></script>
 </body>
-
 </html>

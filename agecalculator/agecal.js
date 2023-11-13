@@ -1,13 +1,21 @@
 function calculateAge() {
-    const birthdate = new Date(document.getElementById("birthdate").value);
-    const today = new Date();
-    const age = today.getFullYear() - birthdate.getFullYear();
-
-    // Check if the birthday has occurred this year
-    if (today.getMonth() < birthdate.getMonth() || (today.getMonth() === birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
-        age--;
+    var birthdate = document.getElementById('birthdate').value;
+    
+    if (!birthdate) {
+        alert("Please enter your birthdate.");
+        return;
     }
 
-    document.getElementById("result").innerText = `Your age is ${age} years.`;
-}
+    var today = moment();
+    var birthdateMoment = moment(birthdate, 'YYYY-MM-DD');
 
+    var years = today.diff(birthdateMoment, 'years');
+    birthdateMoment.add(years, 'years');
+
+    var months = today.diff(birthdateMoment, 'months');
+    birthdateMoment.add(months, 'months');
+
+    var days = today.diff(birthdateMoment, 'days');
+
+    document.getElementById('result').innerHTML = 'Your age is: ' + years + ' years, ' + months + ' months, and ' + days + ' days';
+}

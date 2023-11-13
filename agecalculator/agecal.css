@@ -1,65 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #03001C;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0;
-    padding-top: 100px;
+    background: url('https://tse2.mm.bing.net/th?id=OIP.urhd_k_2LPVWvhnyILpQEQHaEo&pid=Api&P=0&h=180') no-repeat center center fixed;
+    background-size: cover;
 }
 
-.container {
-    background-color: #ffc0cb;
+#calculator {
+    text-align: center;
     padding: 20px;
+    border: 1px solid #561c1c;
     border-radius: 8px;
-    box-shadow: 10px 10px 20px rgba(0, 255, 227, 0.888);
-    max-width: 400px;
-    margin: 0 auto;
-    margin-bottom: 60px; 
+    box-shadow: 0 0 10px  rgb(142, 35, 131);
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
 }
-
-input[type="date"] {
-width: 90%;
-padding: 10px;
-margin-top: 5px;
-border: 1px solid #ccc;
-border-radius: 5px;
+input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
 }
-
-label {
-display: block;
-margin-top: 10px;
-font-weight: bold;
-}
-
 
 button {
-    background-color: #112336;
-    color: #fff;
-    border: none;
     padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
 }
 
-#result{
-    font-size: 20px;
+#result {
     margin-top: 20px;
-}
-
-.animated-text {
-    font-size: 32px;
-    transition: color 0.5s, font-size 0.5s;
-}
-
-.animated-text:hover {
-    color: #E5E0FF;
-    font-size: 45px;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    color: #E5E0FF;
-    text-align: center;
+    font-size: 18px;
 }
